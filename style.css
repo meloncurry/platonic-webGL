@@ -1,0 +1,94 @@
+:root {
+    --bg: #000;
+    --fg: #bfefff;
+    --err: #ff4444;
+  }
+  
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: monospace;
+    overflow: hidden;
+  }
+  
+  #container {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    overflow: hidden;
+    background: var(--bg);
+  }
+  
+  #ascii {
+    margin: 0 auto;
+    user-select: none;
+    pointer-events: none;
+    white-space: pre;
+    font-size: 7px;
+    line-height: 6.5px;
+    letter-spacing: 0.5px;
+    color: var(--fg);
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  #links {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 50;
+    font-size: 14px;
+  }
+  
+  #links a {
+    color: var(--fg);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  #loading {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 60;
+    color: var(--fg);
+    text-align: center;
+    white-space: pre;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+  
+  #error {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 80;
+    color: var(--err);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 12px;
+    min-width: 60vw;
+    max-width: 90vw;
+    white-space: pre-wrap;
+    font-size: 13px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  }
+  
+  #debug {
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
+    z-index: 30;
+    color: #999;
+    font-size: 11px;
+    white-space: pre-line;
+  }
+  
